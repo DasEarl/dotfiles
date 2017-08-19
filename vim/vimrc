@@ -1,0 +1,42 @@
+" 1. Install Vundle
+" $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" 2. Run :PluginInstall
+
+set nocompatible                             " Required by Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()                          " Plugins
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'godlygeek/tabular'
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'tpope/vim-surround'
+    Plugin 'ervandew/supertab'
+    Plugin 'nathanaelkane/vim-indent-guides'
+    Plugin 'jiangmiao/auto-pairs'
+    Plugin 'tpope/vim-sensible'
+    Plugin 'yggdroot/indentline'
+call vundle#end()
+filetype plugin indent on
+
+set number         " Show line numbers
+set showmatch      " Show search instantly
+set relativenumber " Show relative line numbers
+set hlsearch       " Highlight search
+set smartcase      " Case insensitive for lowercase search
+set ignorecase     " Case insensitive
+set incsearch      " Highlight search directly
+
+set tabstop=4     " Set tabstop character to 4 spaces
+set shiftwidth=4  " Indent have a width of 4
+set softtabstop=4 " TAB will have 4 columns
+set smartindent   " Autoindent when starting a new line
+set smarttab      " Will insert $shiftwidth when TAB is entered
+set autoindent    " Copy new indentlevel from current line
+set expandtab     " Will insert spaces instead of tabs in insert mode
+set ruler         " Show ruler in the bottom line
+
+let g:indentLine_char = '▏'       " Indentline character
+let g:indentLine_color_term = 239 " and color
+
+let g:airline_powerline_fonts = 1 " Enable PowerLine patched symbols
