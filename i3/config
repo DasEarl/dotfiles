@@ -13,7 +13,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill                     
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run                 
+bindsym $mod+d exec rofi -show run -font "Ubuntu 13" -opacity 95 -separator-style solid -hide-scrollbar -padding 400 -fullscreen -sidebar-mode
 # change focus
 bindsym $mod+j focus left                     
 bindsym $mod+k focus down
@@ -123,6 +123,7 @@ hide_edge_borders both
 exec --no-startup-id gnome-terminal
 exec --no-startup-id google-chrome --no-startup-window
 exec --no-startup-id feh --bg-scale Pictures/wallpaper.jpg
+exec --no-startup-id compton -f
 
 # Custom keybinds
 bindsym Control+F9 exec --no-startup-id xdotool mousemove 0 0
