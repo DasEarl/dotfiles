@@ -1,6 +1,7 @@
 set $mod Mod4
 
 # Font for titles. Will also be used by the bar unless a different font is used
+
 # in the bar {} block below.
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1     
 font pango:Ubuntu 10                                        
@@ -10,48 +11,74 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal 
+
 # kill focused window
 bindsym $mod+Shift+q kill                     
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -font "Ubuntu 13" -opacity 95 -separator-style solid -hide-scrollbar -padding 400 -fullscreen -sidebar-mode
+
 # change focus
 bindsym $mod+j focus left                     
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+odiaeresis focus right
+
 # alternatively, use the cursor keys
 bindsym $mod+Left focus left                  
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 # move focused window
 bindsym $mod+Shift+j move left                
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+odiaeresis move right
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left             
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 # split in horizontal orientation
 bindsym $mod+h split h                        
+
 # split in vertical orientation
 bindsym $mod+v split v                        
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle              
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking                
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle      
+
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle          
+
 # focus the parent container
 bindsym $mod+a focus parent                   
+
 # focus the child container
 bindsym $mod+Shift+a focus child              
+
+# switch to workspace
+bindsym control+1 workspace 1
+bindsym control+2 workspace 2
+bindsym control+3 workspace 3
+bindsym control+4 workspace 4
+bindsym control+5 workspace 5
+bindsym control+6 workspace 6
+bindsym control+7 workspace 7
+bindsym control+8 workspace 8
+bindsym control+9 workspace 9
+bindsym control+0 workspace 10
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -79,8 +106,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 # lock i3
 bindsym $mod+Shift+w exec "i3lock"
 
@@ -109,6 +138,8 @@ bar {
 
 # Do not follow mouse focus
 focus_follows_mouse no
+mouse_warping none
+
 
 # i3-gaps settings
 gaps inner 10
