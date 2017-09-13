@@ -1,0 +1,6 @@
+#!/bin/bash
+
+NAME=$(i3-msg -t get_workspaces | jq '.[] | select(.focused).name')
+NUMBER=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused).name' | grep -oP "\d")
+
+i3-msg rename workspace $NAME to "$NUMBER: $(zenity --entry)"
