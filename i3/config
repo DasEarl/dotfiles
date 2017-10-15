@@ -41,7 +41,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 # split in horizontal orientation
 bindsym $mod+h split h                        
 
@@ -131,9 +130,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-	status_command py3status
-	position top
-	tray_output primary
+    status_command py3status 
+    position bottom
+    tray_output primary
 }
 
 # Do not follow mouse focus
@@ -153,7 +152,7 @@ hide_edge_borders both
 # Autostart
 exec --no-startup-id gnome-terminal
 exec --no-startup-id google-chrome --no-startup-window
-exec --no-startup-id feh --bg-scale Pictures/wallpaper.jpg
+exec --no-startup-id feh /usr/share/backgrounds/warty-final-ubuntu.png --bg-scale
 exec --no-startup-id compton -f
 
 # Custom keybinds
